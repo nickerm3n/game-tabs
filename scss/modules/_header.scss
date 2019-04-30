@@ -1,0 +1,144 @@
+.game-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.game-menu {
+	width: 600px;
+	box-shadow: 0 10px 30px 3px rgba(0, 0, 0, 0.5);
+	
+	&__tab {
+		display: flex;
+    	justify-content: space-between;
+		padding: 30px 50px 0 50px;
+		background: $lightgrey;
+		
+	}
+
+	&__tablinks {
+		border-bottom: 2px solid transparent;
+		padding: 0 15px 30px;
+		font-size: 16px;
+		color: #fff;
+		text-transform: uppercase;
+		background: none;
+		opacity: .7;
+		
+		& i {
+			font-size: 20px;
+		}
+
+		& span {
+			display: block;
+			margin-top: 15px;
+		}
+	}
+
+	&__tablinks:hover, .active {
+		opacity: 1;
+		border-bottom: 2px solid #fff;
+	}
+}
+
+.game-promo {
+	padding: 60px 40px;
+	background: $darkgrey;
+	color: #fff;
+	
+	
+	&__tabcontent {
+		justify-content: space-between;
+		display: none;
+		animation: fade .8s ease-in-out;
+		
+		.poster {
+			width: 31%;
+		}
+
+		.poster__rating {
+			color: grey;
+			display: flex;
+    		justify-content: space-around;;
+    		font-size: 18px;
+    		padding: 0 10px;
+    		
+		}
+
+		.poster__item {
+			cursor: pointer;
+		}
+
+		.fill {
+			color: $yellow;
+		}
+
+		.poster-info {
+			width: 62%;
+			font-size: 14px;
+			position: relative;
+			
+			&__rating {
+				@include pos($r:0, $t: 0);
+				width: 77px;
+				height: 77px;
+				background: url('../images/score.png') no-repeat top center;
+				-webkit-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+			}
+
+			
+			&__title {
+				font-size: 32px;
+				line-height: 50px;
+			}
+
+			&__release {
+				margin-bottom: 40px
+			}
+
+			&__desc {
+				line-height: 25px;
+				opacity: .8;
+			}
+
+			&-price {
+				margin-top: 40px;
+				display: flex;
+				justify-content: space-between;
+				
+				&__discount {
+					color: $yellow;
+					font-size: 12px;
+					font-weight: 700;
+				}
+
+				&__price {
+					font-size: 32px;
+				}
+
+				&__button {
+					font-weight: 700;
+					font-size: 16px;
+					background: $green;
+					color: #fff;
+					text-transform: uppercase;
+					padding: 0 35px;
+					border-radius: 3px;
+					
+					&:hover {
+						background: darken($green, 10%);
+					}
+				}
+			}
+		}
+	}
+}
+
+@keyframes fade {
+	from {opacity: 0}
+	to {opacity: 1}
+}

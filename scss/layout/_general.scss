@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+@include font-face('icomoon', 'fonts/icomoon/icomoon', $ver: '?qsy7bu' );
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-basket:before {
+  content: "\e900";
+}
+.icon-card:before {
+  content: "\e901";
+}
+.icon-tooltip:before {
+  content: "\e902";
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .1s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+html {
+	height: 100%;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+body {
+	height: 100vh;
+	background: url('../images/background.png') no-repeat top center;
+	background-size: cover;
+	font: 400 14px/normal 'Lato', sans-serif;
+	
+}
